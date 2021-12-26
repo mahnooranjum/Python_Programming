@@ -11,11 +11,16 @@
  
 Use the docker compose file to setup the Kafka server and the Kafkadrop UI
 
+```
 sudo docker-compose up 
+```
+
 
 To kill a process, see the containers by
 
+```
 sudo docker ps 
+```
 
 To stop a container 
 
