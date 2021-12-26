@@ -3,6 +3,7 @@
 ## Requirements: 
 
 | Kafka | Can download and install using Kafka quickstart |
+| ----------- | ----------- |
 | Zookeeper | Already comes with the Kafka quickstart archive | 
 | Kafkadrop | Can be compiled on your own, or use the official docker image | 
 | Faker | To generate fake data and publish to a topic |
