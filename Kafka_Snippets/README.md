@@ -24,8 +24,9 @@ sudo docker ps
 
 To stop a container 
 
+```
 sudo docker stop HEX_ID_CONTAINER 
-
+```
 
 ## References 
 
