@@ -1,6 +1,7 @@
 # A basic Kafka setup on Ubuntu 
 
 ## Requirements: 
+
 | Kafka | Can download and install using Kafka quickstart |
 | Zookeeper | Already comes with the Kafka quickstart archive | 
 | Kafkadrop | Can be compiled on your own, or use the official docker image | 
