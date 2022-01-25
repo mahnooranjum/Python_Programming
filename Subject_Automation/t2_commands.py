@@ -15,7 +15,7 @@ from selenium.webdriver.common.keys import Keys
 
 # driver = webdriver.Ie(executable_path="F:/Repo/Subject_Automation/IEDriverServer_x64_3.150.1/IEDriverServer.exe")
 
-driver = webdriver.Firefox(executable_path="F:/Repo/Subject_Automation/geckodriver-v0.28.0-win64/geckodriver.exe")
+driver = webdriver.Firefox(executable_path="/geckodriver-v0.28.0-win64/geckodriver.exe")
     
 
 
