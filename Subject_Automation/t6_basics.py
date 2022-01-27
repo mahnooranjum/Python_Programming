@@ -26,4 +26,4 @@ WebDriverWait(driver, 30).until(
 )
 
 prog_ele = driver.find_elements_by_class_name('progress-label')
-print(prog_ele)
+print(prog_ele[0].text)
