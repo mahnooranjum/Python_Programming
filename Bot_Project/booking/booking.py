@@ -51,3 +51,13 @@ class Booking(webdriver.Edge):
             if int(self.find_element(By.ID, "group_adults").get_attribute("value")) == 1:
                 break
 
+        for _ in range(adults - 1):
+            self.find_element(By.CSS_SELECTOR, 'button[aria-label="Increase number of Adults"]').click()
+
+
+    def click_search(self):
+        self.find_element(By.CSS_SELECTOR, 'button[type="submit"]').click()
+
+
+    def apply_filter(self):
+        BookingFilters()
