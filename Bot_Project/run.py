@@ -10,3 +10,5 @@ with Booking(teardown = False) as bot:
     bot.change_currency(currency='PKR')
     bot.search_place(place='Islamabad')
     bot.select_dates(checkin="2022-01-28", checkout="2022-01-29")
+    bot.select_adults(10)
+    bot.click_search()
