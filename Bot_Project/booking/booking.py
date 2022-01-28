@@ -1,5 +1,8 @@
+from pickletools import optimize
 from selenium import webdriver
 import booking.constants as const
+from booking.booking_filters import BookingFilters
+
 import os
 from selenium.webdriver.common.by import By 
 from selenium.webdriver.support.ui import WebDriverWait
@@ -13,6 +16,11 @@ class Booking(webdriver.Edge):
         self.driver_path = driver_path
         self.teardown = teardown 
         os.environ['PATH']+=driver_path
+
+        # opts = webdriver.ChromeOptions()
+        # opts.add_experimental_option('excludeSwitches', ['enable-logging'])
+        # super(Booking, self).__init__(options=opts)
+
         super(Booking, self).__init__()
         self.implicitly_wait(15)
         self.maximize_window()
@@ -60,4 +68,13 @@ class Booking(webdriver.Edge):
 
 
     def apply_filter(self):
-        BookingFilters()
+        obj = BookingFilters(driver=self)
+        obj.apply_star(4, 5)
+        obj.sort_by_lowest()
+
+    def show_results(self):
+        parent =self.find_element(By.CSS_SELECTOR, 'div[data-block-id="hotel_list"]')
+        eles = parent.find_elements(By.CSS_SELECTOR, 'div[data-testid="property-card"]')
+        for el in eles:
+            print(el.find_element(By.CSS_SELECTOR, 'div[data-testid="title"]').get_attribute('innerHTML').strip())
+            print(el.find_element(By.CSS_SELECTOR, 'div[data-testid="price-and-discounted-price"]').find_element(By.TAG_NAME,'span').text)
