@@ -19,7 +19,7 @@ def knapsack(wt, pr, w, n, tab={}):
                 tab[(i,j)] = tab[(i-1, j)]
             else:
                 tab[(i,j)] = max(tab[(i-1, j)], pr[i] + tab[(i-1, j)])
-    return tab
+    return tab 
 
 
 knapsack(wt, pr, w, n)
