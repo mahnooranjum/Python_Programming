@@ -17,4 +17,4 @@ my_car._fields
 
 my_car._asdict()
 
-my_car.replace(color='blue')
+my_car._replace(color='blue')
