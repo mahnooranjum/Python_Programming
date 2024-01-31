@@ -1,5 +1,5 @@
 
-
+# sorted
 def func(arr:list)->list:
     cur = 0
     for i in range(1, len(arr)):

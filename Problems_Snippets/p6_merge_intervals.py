@@ -18,8 +18,22 @@ start = [x for (x,y) in arr]
 end = [y for (x,y) in arr]
 
 joiner = []
+final_arr = list(arr)
 for i in range(n):
-    for j in (range(i+1,n)):
-        if end[i] > start[j]:
-            joiner.append([start[i],end[j]])
+    pair = [start[i], end[i]]
+    for j in range(i+1,n):
+        if start[j] < end[i]:
+            pair[1] = end[j]
+            if arr[j] in final_arr:
+                final_arr.remove(arr[j])
+            if arr[i] in final_arr:
+                final_arr.remove(arr[i])
+            
+    if pair[1] == end[i]:
+        pair = None
+    
+    if pair:
+        final_arr.append(pair)
+
+print(final_arr)
 
