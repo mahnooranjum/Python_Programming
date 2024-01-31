@@ -17,8 +17,8 @@ def strong(func):
     return wrapper
     
     
-# @strong 
-# @em 
+@strong 
+@em 
 def greet():
     return 'Hello World'
 
